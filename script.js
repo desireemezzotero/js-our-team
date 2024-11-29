@@ -65,27 +65,33 @@ function pushCard (array){
 } 
 console.log(pushCard(teamMembers))
 
-/* 
-inserisci una tua immagine 
-const form = document.querySelectorAll('form');
 
-form.addEventListener('submit', formPushCard)
+/* inserisci una tua immagine  */
+const form = document.querySelector('form');
 
-
-function formPushCard () {
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  
   const name = document.getElementById('name').value;
   const role = document.getElementById('role').value;
   const email= document.getElementById('email').value;
   const img = document.getElementById('img').value;
-
+  
   const newArray = {
     name, 
     role, 
     email, 
     img
   }
+  
+  teamMembers.push(newArray)
+  pushCard(teamMembers)
+  console.log(teamMembers)
+})
 
-  console.log(newArray)
-} */
+
+
+
+
 
 
